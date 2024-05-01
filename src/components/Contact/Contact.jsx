@@ -1,12 +1,13 @@
-import { FaPhone } from "react-icons/fa6";
-import { FaUserLarge } from "react-icons/fa6";
-import css from "../Contact/Contact.module.css";
-import { useDispatch } from "react-redux";
-import { deleteContact } from "../../redux/contactsSlice";
+import { FaPhone } from 'react-icons/fa6';
+import { FaUserLarge } from 'react-icons/fa6';
+import css from './Contact.module.css';
+import { useDispatch } from 'react-redux';
+import { deleteContact } from '../../redux/contactsOps';
 
 const Contact = ({ contact }) => {
   const dispatch = useDispatch();
   const handleDelete = () => dispatch(deleteContact(contact.id));
+
   return (
     <div className={css.contactBox}>
       <div>
